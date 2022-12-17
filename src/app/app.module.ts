@@ -2,16 +2,23 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   //we can list the components, directives, and pipes that are part of the module in the declarations array
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    ButtonComponent
   ],
+  //we can import other modules by listing them in the imports array
   imports: [
     BrowserModule
   ],
+  //we can list the services that are part of the module in the providers array but read further on why this should only be used in some cases
   providers: [],
+  //The process of loading the index.html page, app-level module, and app-level component is called bootstrapping, or loading the app.
   bootstrap: [AppComponent]
 })
 export class AppModule { }
@@ -30,5 +37,7 @@ export class AppModule { }
 
 //NgModule - the @NgModule annotation is what actually defines the module.
 
-//we can import other modules by listing them in the imports array
-//we can list the services that are part of the module in the providers array but read further on why this should only be used in some cases
+
+//////////////////////////////////////////Commands
+
+//ng generate component components/header  - Generates a new compoent and all of its required files.
